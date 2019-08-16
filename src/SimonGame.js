@@ -111,17 +111,28 @@ export default class SimonGame extends Component {
         const { activeButton, isPlayerTerm } = this.state;
         return (
             <div className="container">
-                <h1>Simon Game</h1>
-                {/* debug */}
-                <h3>{this.state.level}, {this.state.says.join(",")}, {activeButton}</h3>
-                <div className='simon-board'>
-                    <div onClick={() => this.playerSays(SimonColor.RED)} className={activeButton == SimonColor.RED ? "pad-button red active" : "pad-button red"} />
-                    <div onClick={() => this.playerSays(SimonColor.BLUE)} className={activeButton == SimonColor.BLUE ? "pad-button blue active" : "pad-button blue"} />
-                    <div onClick={() => this.playerSays(SimonColor.GREEN)} className={activeButton == SimonColor.GREEN ? "pad-button green active" : "pad-button green"} />
-                    <div onClick={() => this.playerSays(SimonColor.YELLOW)} className={activeButton == SimonColor.YELLOW ? "pad-button yellow active" : "pad-button yellow"} />
-                    <div className={isPlayerTerm ? "simon-overlay" : "simon-overlay active"} />
+                <div>
+                    <h1>Simon Game</h1>
+                    {/* debug */}
+                    <h3>{this.state.level}, {this.state.says.join(",")}, {activeButton}</h3>
+                    <div className='simon-board'>
+                        <div onClick={() => this.playerSays(SimonColor.RED)} className={activeButton == SimonColor.RED ? "pad-button red active" : "pad-button red"} />
+                        <div onClick={() => this.playerSays(SimonColor.BLUE)} className={activeButton == SimonColor.BLUE ? "pad-button blue active" : "pad-button blue"} />
+                        <div onClick={() => this.playerSays(SimonColor.GREEN)} className={activeButton == SimonColor.GREEN ? "pad-button green active" : "pad-button green"} />
+                        <div onClick={() => this.playerSays(SimonColor.YELLOW)} className={activeButton == SimonColor.YELLOW ? "pad-button yellow active" : "pad-button yellow"} />
+                        <div className={isPlayerTerm ? "simon-overlay" : "simon-overlay active"} />
+                    </div>
+                    <button onClick={() => this.beginLevel(1)} className="start">Start</button>
                 </div>
-                <button onClick={() => this.beginLevel(1)} className="start">Start</button>
+                <div>
+                    <select style={{height:"100%", margin:"15px"}} name="fruit" multiple>
+                        <option value="none">Nothing</option>
+                        <option value="guava">Guava</option>
+                        <option value="lychee">Lychee</option>
+                        <option value="papaya">Papaya</option>
+                        <option value="watermelon">Watermelon</option>
+                    </select>
+                </div>
             </div>
         )
     }
