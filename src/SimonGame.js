@@ -114,7 +114,7 @@ export default class SimonGame extends Component {
                 <div>
                     <h1>Simon Game</h1>
                     {/* debug */}
-                    <h3>{this.state.level}, {this.state.says.join(",")}, {activeButton}</h3>
+                    <h3>LEVEL - {this.state.level}</h3>
                     <div className='simon-board'>
                         <div onClick={() => this.playerSays(SimonColor.RED)} className={activeButton == SimonColor.RED ? "pad-button red active" : "pad-button red"} />
                         <div onClick={() => this.playerSays(SimonColor.BLUE)} className={activeButton == SimonColor.BLUE ? "pad-button blue active" : "pad-button blue"} />
@@ -125,12 +125,11 @@ export default class SimonGame extends Component {
                     <button onClick={() => this.beginLevel(1)} className="start">Start</button>
                 </div>
                 <div>
-                    <select style={{height:"100%", margin:"15px"}} name="fruit" multiple>
-                        <option value="none">Nothing</option>
-                        <option value="guava">Guava</option>
-                        <option value="lychee">Lychee</option>
-                        <option value="papaya">Papaya</option>
-                        <option value="watermelon">Watermelon</option>
+                    <div>Active:{activeButton}</div>
+                    <select style={{ height: "100%", margin: "0px 15px 15px 15px" }} name="fruit" multiple>
+                        {this.state.says.map((item, index) => (
+                            <option>{item}</option>
+                        ))}
                     </select>
                 </div>
             </div>
