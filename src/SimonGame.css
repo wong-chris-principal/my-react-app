@@ -1,0 +1,76 @@
+body{
+  width: 100%;
+}
+.container{
+  text-align: center;
+  width: 600px;
+  margin:0 auto;
+}
+.simon-overlay{
+  border-radius: 500px;
+  width:500px;
+  height: 500px;
+  background: #000000;
+  opacity: 0;
+  position: absolute;
+  top:0px;
+  left:0px;
+  z-index:-999;
+}
+.simon-overlay.active{
+  z-index:999;
+}
+.simon-board{
+  margin:0 auto;
+  width:500px;
+  height: 500px;
+  background: #000000;
+  position: relative;
+  border-radius: 500px;
+}
+.start{
+  margin:15px;
+}
+.pad-button:active,.pad-button.active{
+  opacity: 1!important; 
+}
+
+.pad-button:hover{
+  opacity: 0.9;
+}
+
+.pad-button{
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.red{
+  background: red;
+  border-radius: 230px 10px 10px 10px;
+  top:15px;
+  left:15px;
+}
+
+.blue{
+  background: blue;
+  border-radius: 10px 230px 10px 10px;
+  top:15px;
+  right:15px;
+}
+
+.green{
+  background: green;
+  border-radius: 10px 10px 230px 10px;
+  bottom:15px;
+  right:15px;
+}
+
+.yellow{
+  background: yellow;
+  border-radius: 10px 10px 10px 230px;
+  bottom:15px;
+  left:15px;
+}
