@@ -25,7 +25,7 @@ steps:
     rootFolderOrFile: '\build'
     includeRootFolder: false
     archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/build.zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)'
     replaceExistingArchive: true
 
 - task: PublishBuildArtifacts@1
