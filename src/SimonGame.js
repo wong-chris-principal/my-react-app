@@ -114,7 +114,7 @@ export default class SimonGame extends Component {
                 <div>
                     <h1>Simon Game</h1>
                     {/* debug */}
-                    <h3>LEVEL - <span>{this.state.level}</span></h3>
+                    <h3>LEVEL - <span className="level-display">{this.state.level}</span></h3>
                     <div className='simon-board'>
                         <div onClick={() => this.playerSays(SimonColor.RED)} className={activeButton == SimonColor.RED ? "pad-button red active" : "pad-button red"} />
                         <div onClick={() => this.playerSays(SimonColor.BLUE)} className={activeButton == SimonColor.BLUE ? "pad-button blue active" : "pad-button blue"} />
