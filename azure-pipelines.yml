@@ -17,9 +17,9 @@ steps:
 
 - script: |
     npm install
-    npm test-simon-local
+    npm run test-simon-local
     npm run build
-  displayName: 'npm install and build'
+  displayName: 'npm install, test and build'
 
 ## Copy the client to the staging directory
 - task: CopyFiles@2
