@@ -17,7 +17,7 @@ steps:
 
 - script: |
     npm install
-    npm run test-simon-local
+    npm run test-simon-remote
     npm run build
   displayName: 'npm install, test and build'
 
