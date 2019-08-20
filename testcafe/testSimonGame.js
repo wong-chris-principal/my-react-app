@@ -6,6 +6,7 @@ fixture`New Fixture`
 test('New Test', async t => {
     await t
         .click(Selector('button').withText('Start'))
+        .wait(3000)
         .expect(Selector('span').withText('1')().textContent).eql('1');
 
 });
