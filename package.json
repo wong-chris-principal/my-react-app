@@ -23,7 +23,7 @@
     "ntlm-proxy": "start /min \"ntlm-proxy\" cmd /c node_modules\\.bin\\ntlm-proxy",
     "cypress-ntlm": "npm run ntlm-proxy && (cypress-ntlm open & ntlm-proxy-exit)",
     "test-simon-local": "testcafe chrome ./testcafe/testSimonGame.js",
-    "test-simon-remote": "testcafe \"browserstack:iPhone 8@12.0\" ./testcafe/testSimonGame.js"
+    "test-simon-remote": "testcafe \"browserstack:iPad Air 2019@12.2\" ./testcafe/testSimonGame.js"
   },
   "eslintConfig": {
     "extends": "react-app"
