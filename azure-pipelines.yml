@@ -30,7 +30,8 @@ steps:
   displayName: 'testcafe -b browserstack'
 
 - script: |
-    npm run test-simon-remote
+    npm run test-browserstack
+    npm run test-lambdatest
   displayName: 'npm test'
 
 - script: |
