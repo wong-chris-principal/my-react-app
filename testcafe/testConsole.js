@@ -1,16 +1,25 @@
 import { Selector } from 'testcafe';
 
-fixture`New Fixture`
-    .page`https://chris-node-app.azurewebsites.net/`;
+fixture `New Fixture`
+    .page `https://chris-node-app.azurewebsites.net/`;
 
-test('Test - input command', async t => {
+test('New Test', async t => {
     await t
-        .click(Selector('div').withAttribute('class', 'commandContainer'))
+        .click(Selector('html'))
         .wait(1000)
-        .pressKey('c space 1 0 space 1 0 enter')
-        .wait(1000)
-        .pressKey('b space 1 space 1 space p enter')
-        .wait(1000)
-        .expect('1').eql('1');
-
+        .typeText(Selector('html'), 'C 20 20')
+        .pressKey('enter')
+        .wait(500)
+        .typeText(Selector('#commandInput'), 'L 1 5 20 10')
+        .pressKey('enter')
+        .wait(500)
+        .typeText(Selector('#commandInput'), 'B 1 10 p')
+        .pressKey('enter')
+        .wait(500)
+        .typeText(Selector('#commandInput'), 'B 1 1 -')
+        .pressKey('enter')
+        .wait(500)
+        .typeText(Selector('#commandInput'), 'q')
+        .pressKey('enter')
+        .wait(2000);
 });
