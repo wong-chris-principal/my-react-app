@@ -22,6 +22,10 @@ steps:
 
 
 - script: |
+    testcafe -b lambdatest
+  displayName: 'testcafe -b lambdatest'
+
+- script: |
     testcafe -b browserstack
   displayName: 'testcafe -b browserstack'
 
