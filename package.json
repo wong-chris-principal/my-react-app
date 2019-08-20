@@ -23,8 +23,8 @@
     "ntlm-proxy": "start /min \"ntlm-proxy\" cmd /c node_modules\\.bin\\ntlm-proxy",
     "cypress-ntlm": "npm run ntlm-proxy && (cypress-ntlm open & ntlm-proxy-exit)",
     "test-local": "testcafe chrome ./testcafe/",
-    "test-browserstack": "testcafe \"browserstack:iPad Air 2019@12\" ./testcafe/",
-    "test-lambdatest": "testcafe \"lambdatest:Chrome@74.0:Windows 8\" ./testcafe/"
+    "test-browserstack": "testcafe \"browserstack:iPad Air 2019@12\" ./testcafe/test-principal-login-failed.js",
+    "test-lambdatest": "testcafe \"lambdatest:Chrome@74.0:Windows 8\" ./testcafe/test-principal-login-failed.js"
   },
   "eslintConfig": {
     "extends": "react-app"
