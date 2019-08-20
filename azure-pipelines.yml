@@ -16,13 +16,12 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    npm install testcafe -g
     npm install
   displayName: 'npm install'
 
 
 - script: |
-    browserstack
+    testcafe -b browserstack
   displayName: 'testcafe -b browserstack'
 
 - script: |
