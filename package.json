@@ -9,7 +9,7 @@
     "perfecto-reporting": "^2.5.3",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "react-scripts": "2.1.3",
+    "react-scripts": "5.0.1",
     "testcafe-browser-provider-lambdatest": "^1.0.3",
     "testcafe-browserstack": "^0.1.4"
   },
